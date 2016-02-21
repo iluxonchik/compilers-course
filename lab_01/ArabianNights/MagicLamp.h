@@ -6,6 +6,9 @@
 #ifndef ARABIANNIGHTS_MAGICLAMP_H
 #define ARABIANNIGHTS_MAGICLAMP_H
 
+#include "AbstractGenie.h"
+#include "RecyclableDaemon.h"
+
 namespace arabiannights {
     class MagicLamp {
     private:
@@ -14,10 +17,12 @@ namespace arabiannights {
         int _num_genies;
     public:
         AbstractGenie rub(int num_wishes);
-        void feedDaemon(Daemon& daemon);
-        int nGenies(); // num genies left
-        int nDaemons(); // num recharges
+        void feedDaemon(RecyclableDaemon& daemon);
+        int nGenies() const; // num genies left
+        int nDaemons() const; // num recharges
         MagicLamp(int num_genies);
+
+        bool operator==(const MagicLamp &other);
     };
 }
 
