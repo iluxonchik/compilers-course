@@ -3,5 +3,5 @@ project(ArabianNights)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp MagicLamp.cpp MagicLamp.h)
 add_executable(ArabianNights ${SOURCE_FILES})

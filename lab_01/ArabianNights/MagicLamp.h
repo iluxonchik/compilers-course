@@ -9,12 +9,12 @@
 namespace arabiannights {
     class MagicLamp {
     private:
+        const int INIT_NUM_GENIES;
         int _num_rubs;
         int _num_genies;
-        bool _active;
     public:
-        AbstractGenie rub();
-        void feedDaemon(Daemon daemon);
+        AbstractGenie rub(int num_wishes);
+        void feedDaemon(Daemon& daemon);
         int nGenies(); // num genies left
         int nDaemons(); // num recharges
         MagicLamp(int num_genies);
